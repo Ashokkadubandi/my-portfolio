@@ -1,6 +1,7 @@
 let projectBoxes = document.querySelectorAll('.project-card');
+let proImg = document.querySelector('.ban-curve-card')
+
 let boxHeight = window.innerHeight
-console.log(innerHeight)
 
 const getScroller = () => {
     projectBoxes.forEach((box) => {

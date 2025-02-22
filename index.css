@@ -42,7 +42,7 @@
 
 .curve-card img {
     border-radius: 90%;
-    animation: name 1.5s linear 1;
+    animation: name 1s linear 1;
     height: 200%;
     width: 250%;
     transform: translateX(5px);
@@ -130,11 +130,35 @@ h2 {
     border-radius: 10%;
 }
 .project-card{
-    min-height: 200px;
-    background: red;
+    min-height: 100px;
+    background: rgb(243, 242, 242);
+    position: relative;
     margin: 1rem;
+    border-radius: 5px;
     opacity: 0;
     transition: opacity 1.5s;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(105, 105, 105);
+}
+.project-card img{
+    width: 90%;
+    object-fit: center;
+    border-radius: 5px;
+}
+.btn-visit{
+    background-color: rgb(36, 67, 243);
+    color: white;
+    font-family: 'Roboto';
+    margin: 1rem;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    align-self: flex-end;
 }
 .scroll{
     opacity: 1;
