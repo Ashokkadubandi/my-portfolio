@@ -1,0 +1,141 @@
+ @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.root {
+    height: 100vh;
+}
+
+@media(min-width:636px) {
+    .root {
+        display: none;
+    }
+}
+
+.ban-curve-card {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+}
+
+.ban-curve-card img {
+    height: 100%;
+    width: 100%;
+}
+
+.ban-curve-card .curve-card {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -20%;
+    left: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.curve-card img {
+    border-radius: 90%;
+    animation: name 1.5s linear 1;
+    height: 200%;
+    width: 250%;
+    transform: translateX(5px);
+}
+
+@keyframes name {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.info-text {
+    padding-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto';
+    padding-left: 1rem;
+    animation: name 1s linear 1;
+}
+
+.info-text h1 {
+    font-size: 1.5rem;
+}
+
+.info-text p {
+    font-size: 1rem;
+    padding-top: 0.2rem;
+}
+
+.info-text .desc {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    line-height: 1.5;
+}
+
+h2 {
+    font-family: 'Roboto';
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.carousel {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 30%;
+}
+
+.carousel .card {
+    border: 2px solid yellow;
+    border-radius: 5%;
+    height: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel .card::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller {
+    scroll-snap-align: center;
+    width: 90%;
+    flex-shrink: 0;
+    border-radius: 10%;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scroller img {
+    width: 100%;
+    height: 100%;
+    object-fit: center;
+    background-size: cover;
+    border-radius: 10%;
+}
+.project-card{
+    min-height: 200px;
+    background: red;
+    margin: 1rem;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+.scroll{
+    opacity: 1;
+}
