@@ -4,6 +4,7 @@ let boxHeight = window.innerHeight
 let Cardcarousel = document.querySelector('.card');
 let boxes = document.querySelectorAll(".scroller");
 let dotBoxes = document.querySelectorAll(".dot");
+let pageNum = document.getElementById("pages")
 
 const getCarouseScroller = () => {
         boxes.forEach(eachBox => {
@@ -12,6 +13,7 @@ const getCarouseScroller = () => {
                 dotBoxes.forEach(box => {
                     if(box.id === eachBox.id){
                         box.classList.add("opacity")
+                        pageNum.textContent = box.id + "/"+dotBoxes.length
                     }else{
                         box.classList.remove("opacity");
                     }
