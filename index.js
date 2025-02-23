@@ -5,7 +5,7 @@ let Cardcarousel = document.querySelector('.card');
 let boxes = document.querySelectorAll(".scroller");
 let dotBoxes = document.querySelectorAll(".dot");
 
-const getScroller = () => {
+const getCarouseScroller = () => {
         boxes.forEach(eachBox => {
             let boxClient = eachBox.getBoundingClientRect().left
             if(boxClient < 50 && boxClient > 0){
@@ -21,7 +21,23 @@ const getScroller = () => {
     }
 
 Cardcarousel.addEventListener("scroll",function(e){
-    getScroller()
+    getCarouseScroller()
 })
 
-getScroller()
+const getProjectScroll = () => {
+    projectBoxes.forEach(box => {
+        let boxClient = box.getBoundingClientRect().top
+        if(boxClient <= boxHeight / 5 * 4){
+            box.classList.add("scroll")
+        }else{
+            box.classList.remove("scroll")
+        }
+    })
+}
+
+
+window.addEventListener("scroll",function(){
+    getProjectScroll()
+})
+
+getCarouseScroller()
